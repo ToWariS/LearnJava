@@ -375,17 +375,17 @@ public class IfElseStatementTheme {
             depPercent = depSum / 100 * 5;
             endSum = depSum + depPercent ;
             System.out.println("Сумма вклада " + depSum + "начисленный процент " + depPercent +
-                                        "итоговая сумма " + endSum );
+                    "итоговая сумма " + endSum );
         } else if(depSum > 100000 && age < 300000) {
             depPercent = depSum / 100 * 7;
             endSum = depSum + depPercent ;
             System.out.println("Сумма вклада " + depSum + "начисленный процент " + depPercent +
-                                        "итоговая сумма " + endSum );
+                    "итоговая сумма " + endSum );
         } else {
             depPercent = depSum / 100 * 10;
             endSum = depSum + depPercent ;
             System.out.println("Сумма вклада " + depSum + "начисленный процент " + depPercent +
-                                        "итоговая сумма " + endSum );
+                    "итоговая сумма " + endSum );
         }
 
         System.out.println("\n7. Определение оценки по предметам %\n");
@@ -440,7 +440,7 @@ public class IfElseStatementTheme {
 
         System.out.println("\n9. Подсчет количества банкнот\n");
         System.out.println("Доступные номиналы банкнот: " +
-                                    "\n1 USD\n" + "10 USD (доступно 5 штук)\n" + "100 USD");
+                "\n1 USD\n" + "10 USD (доступно 5 штук)\n" + "100 USD");
         int takeSum = 567;
         int hundCount = takeSum / 100;
         int tenCount;
@@ -455,11 +455,10 @@ public class IfElseStatementTheme {
             oneCount += takeSum;
         }
         System.out.println("Необходимо банкнот: \n" + "100USD"+ "\t" + "10USD" + "\t" + "1USD" + "\t" + "\n" +
-                                    hundCount + "\t" + tenCount + "\t" + oneCount);
+                hundCount + "\t" + tenCount + "\t" + oneCount);
 
         takeSum = hundCount * 100 + tenCount * 10 + oneCount;
         System.out.println("Исходная сумма = " + takeSum);
-
 
     }
     }

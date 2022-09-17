@@ -12,13 +12,13 @@ public class VariablesTheme {
         boolean rtxON = true;
 
         System.out.println("\nКоличество мониторов подключенное к компьютеру: " + monitorCount + "\n" +
-                                    "Число ядер процессора: " + coresCount +
-                                    "\nЧастота процессора МГц:\t" +  coresMhz + "\n" +
-                                    "Килобайт оперативной памяти: " + volumeRAM + "\nЧастота CUDA ядер видеокарты: "
-                                    + cudaCount + "\n" +
-                                    "Количество CUDA ядер: " + cudaMhz +
-                                    "\nБуква с которой начинается название видеокарты: " + firstCharCard
-                                    + "\nЕсть ли поддержка лучей: " + rtxON );
+                "Число ядер процессора: " + coresCount +
+                "\nЧастота процессора МГц:\t" +  coresMhz + "\n" +
+                "Килобайт оперативной памяти: " + volumeRAM + "\nЧастота CUDA ядер видеокарты: "
+                + cudaCount + "\n" +
+                "Количество CUDA ядер: " + cudaMhz +
+                "\nБуква с которой начинается название видеокарты: " + firstCharCard
+                + "\nЕсть ли поддержка лучей: " + rtxON );
 
         System.out.println("\n2. Расчет стоимости товара со скидкой");
         int bookPrice = 200;
@@ -28,13 +28,13 @@ public class VariablesTheme {
         int discountPrice = penPrice + bookPrice - discount;
 
         System.out.println("\nCумма скидки = " + discount + "\n"  +
-                                    "Общая стоимость товаров со скидкой = " + discountPrice);
+                "Общая стоимость товаров со скидкой = " + discountPrice);
 
         System.out.println("\n3. Вывод на консоль слова JAVA\n");
         System.out.println("   J    a  v     v  a\n" +
-                                    "   J   a a  v   v  a a\n" +
-                                    "J  J  aaaaa  V V  aaaaa\n" +
-                                    " JJ  a     a  V  a     a");
+                "   J   a a  v   v  a a\n" +
+                "J  J  aaaaa  V V  aaaaa\n" +
+                " JJ  a     a  V  a     a");
 
         System.out.println("\n4. Отображение min и max значений числовых типов данных\n");
 
@@ -46,39 +46,38 @@ public class VariablesTheme {
         System.out.println("Первоначальное значение:   "   + byteMax + "\t" + shortMax + "\t" + intMax + "\t" + longMax);
 
         System.out.println("Значение после инкремента: " + ++byteMax + "\t" + ++shortMax
-                                    + "\t" + ++intMax + "\t" + ++longMax);
+                + "\t" + ++intMax + "\t" + ++longMax);
 
         System.out.println("Значение после декремента: " + --byteMax + "\t" + --shortMax  + "\t"
-                                    + --intMax + "\t" + --longMax);
+                + --intMax + "\t" + --longMax);
 
         System.out.println("\n5. Перестановка значений переменных\n");
-        int firstValue = 2;
-        int secondValue = 5;
-        int thirdValue;
+        int num1 = 2;
+        int num2 = 5;
+        int tmp = num1;
 
         System.out.println("Перестановка значений переменных с помощью третьей переменной\n" +
-                                    "Значения переменных: " + firstValue + "\t" + secondValue);
-
-        thirdValue = firstValue;
-        firstValue = secondValue;
-        secondValue = thirdValue;
-        System.out.println("Значения переменных: " + firstValue + "\t" + secondValue);
+                "Значения переменных: " + num1 + "\t" + num2);
+        
+        num1 = num2;
+        num2 = tmp;
+        System.out.println("Значения переменных: " + num1 + "\t" + num2);
 
         System.out.println("Перестановка значений переменных с помощью арифметических операций\n" +
-                                    "Значения переменных: " + firstValue + "\t" + secondValue);
+                "Значения переменных: " + num1 + "\t" + num2);
 
-        firstValue = firstValue + secondValue - (secondValue = firstValue);
+        num1 = num1 + num2 - (num2 = num1);
 
-        System.out.println("Значения переменных: " + firstValue + "\t" + secondValue);
+        System.out.println("Значения переменных: " + num1 + "\t" + num2);
 
         System.out.println("Перестановка значений переменных с помощью побитовой операции ^\n" +
-                                    "Значения переменных: " + firstValue + "\t" + secondValue);
+                "Значения переменных: " + num1 + "\t" + num2);
 
-        firstValue ^= secondValue;
-        secondValue ^= firstValue;
-        firstValue ^= secondValue;
+        num1 ^= num2;
+        num2 ^= num1;
+        num1 ^= num2;
 
-        System.out.println("Значения переменных: " + firstValue + "\t" + secondValue);
+        System.out.println("Значения переменных: " + num1 + "\t" + num2);
 
         System.out.println("\n6. Вывод символов и их кодов\n");
         
@@ -89,17 +88,17 @@ public class VariablesTheme {
         char char95 = '_';
 
         System.out.println(char35 + "\t" + (int) char35 + "\n" +
-                                    char38 + "\t" + (int) char38 + "\n" +
-                                    char64 + "\t" + (int) char64 + "\n" +
-                                    char94 + "\t" + (int) char94 + "\n" +
-                                    char95 + "\t" + (int) char95 + "\n");
+                char38 + "\t" + (int) char38 + "\n" +
+                char64 + "\t" + (int) char64 + "\n" +
+                char94 + "\t" + (int) char94 + "\n" +
+                char95 + "\t" + (int) char95 + "\n");
 
         System.out.println("\n7. Отображение количества сотен, десятков и единиц числа\n");
 
         int num = 123;
 
         System.out.println("Число сотен = " + num / 100 + "\nЧисло десятков = " + num / 10 % 10 +
-                                    "\nЧисло единиц = " + num % 10);
+                "\nЧисло единиц = " + num % 10);
 
         System.out.println("\n8. Вывод на консоль ASCII-арт Дюка\n\n");
 
@@ -113,11 +112,11 @@ public class VariablesTheme {
         System.out.printf("%c%c%c%c%c%c" , space ,space ,space ,space , slash, backslash);
         System.out.printf("\n%c%c%c%c%c%c%c" ,space, space,space, slash, space , space ,backslash);
         System.out.printf("\n%c%c%c%c%c%c%c%c" , space ,space ,slash, underscore ,bracket , space , closBracket
-                                    ,backslash);
+                ,backslash);
         System.out.printf("\n%c%c%c%c%c%c%c%c%c" , space , slash , space , space , space ,
-                                    space , space , space , backslash);
+                space , space , space , backslash);
         System.out.printf("\n%c%c%c%c%c%c%c%c%c%c" , slash,underscore,underscore,underscore,underscore,
-                                    slash,backslash,underscore,underscore,backslash);
+                slash,backslash,underscore,underscore,backslash);
 
         System.out.println("\n9. Произведение и сумма цифр числа\n");
 
@@ -131,9 +130,9 @@ public class VariablesTheme {
 
         System.out.println("\n10. Преобразование секунд\n");
         int secondCount = 86399;
-        int hour = secondCount / 3600;
-        int min = (secondCount - hour * 3600) / 60;
-        int seconds = secondCount  - hour * 3600 - min * 60;
+        int hour = secondCount % 86400 / 3600;
+        int min = secondCount % 3600 / 60;
+        int seconds = secondCount  % 60;
 
         System.out.println(hour + ":" + min + ":" + seconds);
 
