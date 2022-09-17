@@ -440,7 +440,7 @@ public class IfElseStatementTheme {
 
         System.out.println("\n9. Подсчет количества банкнот\n");
         System.out.println("Доступные номиналы банкнот: " +
-                           "\n1 USD\n" + "10 USD (доступно 5 штук)\n" + "100 USD");
+                                    "\n1 USD\n" + "10 USD (доступно 5 штук)\n" + "100 USD");
         int takeSum = 567;
         int hundCount = takeSum / 100;
         int tenCount;
