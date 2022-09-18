@@ -1,5 +1,5 @@
 public class VariablesTheme {
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         System.out.println("1. Создание переменных и вывод их значений на консоль");
 
         byte monitorCount = 2;
@@ -130,7 +130,7 @@ public class VariablesTheme {
 
         System.out.println("\n10. Преобразование секунд\n");
         int secondCount = 86399;
-        int hour = secondCount % 86400 / 3600;
+        int hour = secondCount / 3600;
         int min = secondCount % 3600 / 60;
         int seconds = secondCount  % 60;
 

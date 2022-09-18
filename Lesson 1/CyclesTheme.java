@@ -1,16 +1,10 @@
 public class CyclesTheme {
-
-    public static void main (String args[]) {
-        int i = -10;
-        int j = 0;
+    public static void main (String[] args) {
+        System.out.println("1. Подсчет суммы четных и нечетных чисел\n");
         int sumEven = 0;
         int sumUneven = 0;
-        int [] nums = { 10 , 5 , -1};
-        int num = 0;
-        int maxValue = 0;
-        int minValue = 0;
-        System.out.println("1. Подсчет суммы четных и нечетных чисел\n");
-
+        int i = -10;
+        int j = 0;
             do {
                 if(i % 2 == 0){
                    sumEven += i;
@@ -19,16 +13,18 @@ public class CyclesTheme {
                 }
                 ++i;
             } while( i <= 21 );
+        System.out.printf("В промежутке [-10, 21] сумма четных чисел = %d, а нечетных = %d\n" , sumEven, sumUneven);
 
-         System.out.printf("В промежутке [-10, 21] сумма четных чисел = %d, а нечетных = %d\n" , sumEven, sumUneven);
-
-         System.out.println("\n2. Вывод чисел в интервале (min и max) в порядке убывания\n");
-         for(i = 0 ; i < nums.length ; i++){
-             if( nums[i] > maxValue){
+        System.out.println("\n2. Вывод чисел в интервале (min и max) в порядке убывания\n");
+        int nums[] = { 10 , 5 , -1};
+        int maxValue = 0;
+        int minValue = 0;
+        for(i = 0 ; i < nums.length ; i++){
+            if( nums[i] > maxValue){
                  maxValue = nums[i];
-             } else if(nums[i] < minValue){
+            } else if(nums[i] < minValue){
                  minValue = nums[i];
-             }
+            }
          }
 
         System.out.println("Интервал значений между " + minValue + " " + maxValue);
@@ -37,45 +33,47 @@ public class CyclesTheme {
          }
 
         System.out.println("\n3. Вывод реверсивного числа и суммы его цифр\n");
-
-        maxValue = 1234;
-        sumEven = 0;
-        while(maxValue>0) {
-           sumUneven = maxValue % 10;
-           System.out.print(sumUneven);
-           sumEven += sumUneven;
-           maxValue /= 10;
+        int revNum = 0;
+        int numc = 0;
+        int num = 1234;
+        while(num>0) {
+            numc = num % 10;
+           System.out.print(numc);
+            revNum += numc;
+           num /= 10;
         }
-        System.out.println("\n" + sumEven);
+        System.out.println("\n" + revNum);
 
         System.out.println("\n4. Вывод чисел на консоль в несколько строк\n");
-        sumEven = 0;
+        int numCount = 0;
         for( i = 1; i<24; i+=2){
             System.out.printf(" %d",i);
-            sumEven++;
-            if(sumEven == 5){
+            numCount++;
+            if(numCount == 5){
                 System.out.println();
-                sumEven = 0;
+                numCount = 0;
             }
         }
-        while(sumEven < 5){
+        while(numCount < 5){
             System.out.printf(" %d",0);
-            sumEven++;
+            numCount++;
         }
 
         System.out.println("\n\n5. Проверка количества единиц на четность\n");
-        minValue = maxValue = 3141591;
-        sumEven = 0;
-        while(maxValue>0) {
-            sumUneven = maxValue % 10;
-            if(sumUneven == 1){
-                sumEven += sumUneven;
+
+        int num1 = 3141591;
+        int oneCount1 = 0;
+        int oneCount2 = 0;
+        while(num1>0) {
+            oneCount2 = num1 % 10;
+            if(oneCount2 == 1){
+                num1 += oneCount2;
             }
 
-            maxValue /= 10;
+            num1 /= 10;
         }
 
-        if(sumEven % 2 == 0){
+        if(num1 % 2 == 0){
             System.out.printf("Число %d содержит %d четное количество единиц" , minValue , sumEven );
         } else {
             System.out.printf("Число %d содержит %d нечетное количество единиц" , minValue , sumEven );
@@ -145,40 +143,40 @@ public class CyclesTheme {
         System.out.println("\n\n8. Проверка, является ли число палиндромом\n");
 
         num = 1234321;
-        minValue = num;
-        maxValue = 0;
+        int sumFirst = num;
+        int sumSecond = 0;
         while( num != 0){
             i = num % 10;
-            maxValue = maxValue * 10 + i;
+            sumSecond = sumSecond * 10 + i;
             num = num / 10;
         }
-        if(minValue == maxValue){
-            System.out.printf("Число %d является палиндромом\n", minValue);
+        if(sumFirst == sumSecond){
+            System.out.printf("Число %d является палиндромом\n", sumFirst);
         } else {
-            System.out.printf("Число %d не является палиндромом\n", minValue);
+            System.out.printf("Число %d не является палиндромом\n", sumFirst);
         }
 
         System.out.println("\n\n9. Определение, является ли число счастливым\n");
 
-        maxValue = 505523;
-        minValue = maxValue / 1000;
-        sumEven = maxValue % 1000;
+        num = 505523;
+        sumFirst = num / 1000;
+        sumSecond = num % 1000;
         int sum1 = 0;
         int sum2 = 0;
-        for ( ; minValue != 0; minValue /= 10 ){
-            sum1 += minValue % 10;
+        for ( ; sumFirst != 0; sumFirst /= 10 ){
+            sum1 += sumFirst % 10;
         }
 
-        System.out.printf("Сумма цифр %d = %d\n" , maxValue / 1000 ,sum1);
-        for ( ; sumEven != 0; sumEven /= 10 ){
-            sum2 += sumEven % 10;
+        System.out.printf("Сумма цифр %d = %d\n" , num / 1000 ,sum1);
+        for ( ; sumSecond != 0; sumSecond /= 10 ){
+            sum2 += sumSecond % 10;
         }
 
-        System.out.printf("Сумма цифр %d = %d\n" , maxValue % 1000 ,sum2);
+        System.out.printf("Сумма цифр %d = %d\n" , num % 1000 ,sum2);
         if(sum1 == sum2){
-            System.out.println("Число " + maxValue + " счастливое!" );
+            System.out.println("Число " + num + " счастливое!" );
         } else {
-            System.out.println("Число " + maxValue + " не счастливое!" );
+            System.out.println("Число " + num + " не счастливое!" );
         }
 
         System.out.println("\n\n10. Вывод таблицы умножения Пифагора\n");
