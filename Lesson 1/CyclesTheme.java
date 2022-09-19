@@ -49,7 +49,7 @@ public class CyclesTheme {
         for( i = 1; i<24; i+=2) {
             System.out.printf(" %d",i);
             numCount++;
-            if(numCount == 5){
+            if(numCount == 5) {
                 System.out.println();
                 numCount = 0;
             }
@@ -148,7 +148,7 @@ public class CyclesTheme {
             sumSecond = sumSecond * 10 + i;
             num = num / 10;
         }
-        if(sumFirst == sumSecond){
+        if(sumFirst == sumSecond) {
             System.out.printf("Число %d является палиндромом\n", sumFirst);
         } else {
             System.out.printf("Число %d не является палиндромом\n", sumFirst);

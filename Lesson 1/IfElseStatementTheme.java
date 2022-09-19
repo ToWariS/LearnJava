@@ -74,19 +74,19 @@ public class IfElseStatementTheme {
         int digit2 = 0;
         int digit3 = 0;
         boolean noEqual = true;
-        if(num1 % 10 == num2 % 10) {
-            digit1 = num1 % 10;
+        digit1 = num1 % 10;
+        if(digit1 == num2 % 10) {
             System.out.println("Одинаковые числа: " + digit1);
             System.out.println("Одинаковые разряды: 1");
             noEqual = false;
         }
-        if(num1 / 10 % 10 == num2 / 10 % 10) {
-            digit2 = num1 / 10 % 10;
+        digit2 = num1 / 10 % 10;
+        if(digit2 == num2 / 10 % 10) {
             System.out.println("Одинаковые числа: " + digit2);
             System.out.println("Одинаковые разряды: 2");
             noEqual = false;
         }
-        if(num1 / 100 == num2 / 100) {
+        if(digit3 == num2 / 100) {
             digit3 = num1 / 100;
             System.out.println("Одинаковые числа: " + digit3);
             System.out.println("Одинаковые разряды: 3");
@@ -100,12 +100,11 @@ public class IfElseStatementTheme {
         char symbol = '\u0057';
         System.out.println(symbol);
 
-
-        if( symbol >= '0' && (int) symbol <= '9')  {
+        if(symbol >= '0' &&  symbol <= '9')  {
             System.out.println("Символ " + symbol + " число");
-        } else if((int) symbol >= 'A' && (int) symbol <= 'Z' ) {
+        } else if (symbol >= 'A' &&  symbol <= 'Z') {
             System.out.println("Символ " + symbol + " большая буква");
-        } else if((int) symbol == 'a' && (int) symbol <= 'z' ) {
+        } else if (symbol == 'a' && symbol <= 'z') {
             System.out.println("Символ " + symbol + " маленькая буква");
         } else {
             System.out.println("Символ " + symbol + " не буква и не число");
@@ -113,18 +112,16 @@ public class IfElseStatementTheme {
 
         System.out.println("\n6. Определение суммы вклада и начисленных банком %\n");
         int depSum = 300000;
+        int proc = 10;
         int endSum;
         int depPercent;
         if(depSum < 100000) {
-            depPercent = depSum / 100 * 5;
-            endSum = depSum + depPercent ;
+            proc = 5;
         } else if(depSum > 100000 && age < 300000) {
-            depPercent = depSum / 100 * 7;
-            endSum = depSum + depPercent ;
-        } else {
-            depPercent = depSum / 100 * 10;
-            endSum = depSum + depPercent ;
+            proc = 7;
         }
+        depPercent = depSum / 100 * proc;
+        endSum = depSum + depPercent ;
         System.out.println("Сумма вклада " + depSum + " начисленный процент " + depPercent +
                 " итоговая сумма " + endSum );
 
@@ -134,29 +131,27 @@ public class IfElseStatementTheme {
         int histGrade = 0;
         int progGrade = 0;
 
-        if(histPercent > 91){
+        if(histPercent > 91) {
             histGrade = 5;
-        } else if(histPercent > 73){
+        } else if(histPercent > 73) {
             histGrade = 4;
         } else if(histPercent > 60) {
             histGrade = 3;
-        } else if(histPercent <= 60){
+        } else if(histPercent <= 60) {
             histGrade = 2;
         }
         System.out.println( histGrade + "\tИстория");
 
-        if(progPercent > 91){
+        if(progPercent > 91) {
             progGrade = 5;
-        } else if(progPercent > 73){
+        } else if(progPercent > 73) {
             progGrade = 4;
         } else if(progPercent > 60) {
             progGrade = 3;
-        } else if(progPercent > 60){
-
+        } else if(progPercent > 60 ) {
             progGrade = 2;
         }
         System.out.println(progGrade + "\tПрограммирование");
-
 
         int gpa = (progGrade + histGrade) / 2;
         System.out.println("Средний бал оценок по предметам: " + gpa);
@@ -167,7 +162,7 @@ public class IfElseStatementTheme {
         int rent = 5000;
         int sell = 13000;
         int costPrice = 9000;
-        int profit = sell * 12 - (rent + costPrice ) * 12;
+        int profit = (sell - (rent + costPrice)) * 12;
         if(profit > 0) {
             System.out.println("Прибыль за год: "+ "+" + profit);
         } else {
@@ -181,9 +176,9 @@ public class IfElseStatementTheme {
         int hundCount = takeSum / 100;
 
         takeSum = takeSum - hundCount * 100;
-        int  tenCount = takeSum / 10 % 10;
-        int  oneCount = takeSum % 10;
-        int  availableTen = 5;
+        int tenCount = takeSum / 10 % 10;
+        int oneCount = takeSum % 10;
+        int availableTen = 5;
         if(tenCount > availableTen) {
             takeSum = (tenCount - availableTen) * 10;
             tenCount = availableTen;
